@@ -141,11 +141,12 @@
             <input type="number" id="day" min="1" max="31" placeholder="วัน" value="1">
             <input type="number" id="month" min="1" max="12" placeholder="เดือน" value="4">
             <input type="number" id="year" min="2548" placeholder="ปี พ.ศ." value="2568">
-            <button onclick="predictLottery()">ทำนายผลฉลากกินแบ่ง @AOMY</button>
+            <button onclick="predictLottery()">ทำนายผลฉลากกินแบ่งรัฐบาล</button>
         </div>
         
         <div class="result" id="predictionResult">
-            กรุณากดปุ่มเพื่อทำนาย        </div>
+            กรุณากดปุ่มเพื่อทำนาย
+        </div>
         
         <canvas id="lotteryChart"></canvas>
     </div>
@@ -370,9 +371,7 @@
                 <strong>ทำนายสำหรับวันที่ ${day}/${month}/${year}</strong><br>
                 เลขท้าย 3 ตัว: ${format3}<br>
                 เลขท้าย 2 ตัว: ${format2}<br>
-                <small>อิงจากงวดล่าสุด ${lastDraw.date.getDate()}/${lastDraw.date.getMonth()+1}/${lastDraw.date.getFullYear()+543}<br>
-                (3 ตัว: ${String(lastDraw.number3).padStart(3, '0')}, 2 ตัว: ${String(lastDraw.number2).padStart(2, '0')})<br>
-                ข้อมูลทั้งหมด: ${fullData.length} งวด</small>
+                <small>ข้อมูลทั้งหมด: ${fullData.length} งวด</small>
                 <div class="zodiac">
                     <strong>ราศี: ${zodiac}</strong><br>
                     <strong>วิเคราะห์การย้ายจากดวงดาว:</strong> ${analysis}<br>
